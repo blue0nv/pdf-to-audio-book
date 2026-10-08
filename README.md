@@ -22,7 +22,7 @@ A simple Python application that extracts text from PDF files and reads it aloud
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/blue0nv/pdf-to-audio-book.git
 cd pdf-to-audiobook
 ```
 
