@@ -1,19 +1,10 @@
-import pyttsx3
-import PyPDF2 as pdf
-from tkinter.filedialog import askopenfilename
+import tkinter as tk
+from src.gui import AudiobookGUI
 
-file = askopenfilename()
+def main():
+    root = tk.tk()
+    app = AudiobookGUI(root)
+    root.mainloop()
 
-reader = pdf.PdfReader(file)
-pages = len(reader.pages)
-
-player = pyttsx3.init()
-
-for num in range(pages):
-    page = reader.pages[num]
-    text = page.extract_text()
-
-    if text:
-        player.say(text)
-
-player.runAndWait()
+if __name__ == "__main__":
+    main()
